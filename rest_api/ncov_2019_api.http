@@ -1,4 +1,6 @@
-@baseUrl = ""
+@baseUrl = https://ncov2019-admin.firebaseapp.com
+
+@authorization = 2887bbc17e568ffc339c895123481e39edb9921146dc32309f73619f6159c45b
 
 POST {{baseUrl}}/token
 Authorization: Basic {{authorization}}

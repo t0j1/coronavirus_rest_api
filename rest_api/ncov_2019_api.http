@@ -1,4 +1,45 @@
-// need to choose environment from either sandbox or production otherwise you can't resolve errors.
-// at the bottom of VScode
+# need to choose environment from either sandbox or production otherwise you can't resolve errors.
+# at the bottom of VScode
+
+# Updating the accessToken via REST Client
+# 1.Request token again
+# 2.Copy access token from response
+
 POST {{baseUrl}}/token
 Authorization: Basic {{authorization}}
+
+# "###" divide requests
+###
+
+GET {{baseUrl}}/cases
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
+# "###" divide requests
+###
+
+GET {{baseUrl}}/casesSuspected
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
+# "###" divide requests
+###
+
+GET {{baseUrl}}/casesConfirmed
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
+# "###" divide requests
+###
+
+GET {{baseUrl}}/deaths
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
+# "###" divide requests
+###
+
+GET {{baseUrl}}/recovered
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
